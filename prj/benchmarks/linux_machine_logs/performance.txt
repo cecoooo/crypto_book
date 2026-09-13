@@ -1,0 +1,645 @@
+ORDER BOOK BENCHMARK REPORT
+All memory values are shown in bytes and MiB.
+Peak RSS is the highest process RSS observed by the operating system.
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:33
+Mode                   : data
+Scenario               : mixed
+Run                    : 1
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 131072
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 104.050 ms
+Throughput             : 9610790.750 updates/second
+Average time           : 104.050 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 37605376 bytes (35.863 MiB)
+RSS after              : 52080640 bytes (49.668 MiB)
+RSS change             : +13.805 MiB
+Peak RSS               : 52080640 bytes (49.668 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 20194304 bytes (19.259 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:33
+Mode                   : data
+Scenario               : mixed
+Run                    : 2
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 131072
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 98.443 ms
+Throughput             : 10158162.385 updates/second
+Average time           : 98.443 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 43651072 bytes (41.629 MiB)
+RSS after              : 56627200 bytes (54.004 MiB)
+RSS change             : +12.375 MiB
+Peak RSS               : 56627200 bytes (54.004 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 20194304 bytes (19.259 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:33
+Mode                   : data
+Scenario               : mixed
+Run                    : 3
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 131072
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 101.892 ms
+Throughput             : 9814354.131 updates/second
+Average time           : 101.892 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 40034304 bytes (38.180 MiB)
+RSS after              : 56680448 bytes (54.055 MiB)
+RSS change             : +15.875 MiB
+Peak RSS               : 56680448 bytes (54.055 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 20194304 bytes (19.259 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:34
+Mode                   : data
+Scenario               : mixed
+Run                    : 4
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 131072
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 97.239 ms
+Throughput             : 10283959.560 updates/second
+Average time           : 97.239 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 40034304 bytes (38.180 MiB)
+RSS after              : 56680448 bytes (54.055 MiB)
+RSS change             : +15.875 MiB
+Peak RSS               : 56680448 bytes (54.055 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 20194304 bytes (19.259 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:34
+Mode                   : data
+Scenario               : mixed
+Run                    : 5
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 131072
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 110.689 ms
+Throughput             : 9034348.321 updates/second
+Average time           : 110.689 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 40034304 bytes (38.180 MiB)
+RSS after              : 56680448 bytes (54.055 MiB)
+RSS change             : +15.875 MiB
+Peak RSS               : 56680448 bytes (54.055 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 20194304 bytes (19.259 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:34
+Mode                   : data
+Scenario               : mixed
+Run                    : 1
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 262144
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 113.303 ms
+Throughput             : 8825910.642 updates/second
+Average time           : 113.303 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 37572608 bytes (35.832 MiB)
+RSS after              : 62017536 bytes (59.145 MiB)
+RSS change             : +23.312 MiB
+Peak RSS               : 62017536 bytes (59.145 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 24777216 bytes (23.629 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:34
+Mode                   : data
+Scenario               : mixed
+Run                    : 2
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 262144
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 109.189 ms
+Throughput             : 9158399.082 updates/second
+Average time           : 109.189 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 41525248 bytes (39.602 MiB)
+RSS after              : 68788224 bytes (65.602 MiB)
+RSS change             : +26.000 MiB
+Peak RSS               : 68788224 bytes (65.602 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 24777216 bytes (23.629 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:36
+Mode                   : data
+Scenario               : mixed
+Run                    : 3
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 262144
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 1269.024 ms
+Throughput             : 788006.946 updates/second
+Average time           : 1269.024 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 39997440 bytes (38.145 MiB)
+RSS after              : 68702208 bytes (65.520 MiB)
+RSS change             : +27.375 MiB
+Peak RSS               : 68788224 bytes (65.602 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 24777216 bytes (23.629 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:38
+Mode                   : data
+Scenario               : mixed
+Run                    : 4
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 262144
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 1168.304 ms
+Throughput             : 855941.349 updates/second
+Average time           : 1168.304 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 39997440 bytes (38.145 MiB)
+RSS after              : 68702208 bytes (65.520 MiB)
+RSS change             : +27.375 MiB
+Peak RSS               : 68788224 bytes (65.602 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 24777216 bytes (23.629 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:39
+Mode                   : data
+Scenario               : mixed
+Run                    : 5
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 262144
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 1183.390 ms
+Throughput             : 845030.073 updates/second
+Average time           : 1183.390 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 39997440 bytes (38.145 MiB)
+RSS after              : 68702208 bytes (65.520 MiB)
+RSS change             : +27.375 MiB
+Peak RSS               : 68788224 bytes (65.602 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 24777216 bytes (23.629 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:41
+Mode                   : data
+Scenario               : mixed
+Run                    : 1
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 524288
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 1243.533 ms
+Throughput             : 804160.523 updates/second
+Average time           : 1243.533 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 37609472 bytes (35.867 MiB)
+RSS after              : 77275136 bytes (73.695 MiB)
+RSS change             : +37.828 MiB
+Peak RSS               : 77275136 bytes (73.695 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 40777216 bytes (38.888 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:42
+Mode                   : data
+Scenario               : mixed
+Run                    : 2
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 524288
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 620.853 ms
+Throughput             : 1610687.424 updates/second
+Average time           : 620.853 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 41562112 bytes (39.637 MiB)
+RSS after              : 92418048 bytes (88.137 MiB)
+RSS change             : +48.500 MiB
+Peak RSS               : 92418048 bytes (88.137 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 40777216 bytes (38.888 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:43
+Mode                   : data
+Scenario               : mixed
+Run                    : 3
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 524288
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 121.417 ms
+Throughput             : 8236111.460 updates/second
+Average time           : 121.417 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 40034304 bytes (38.180 MiB)
+RSS after              : 92332032 bytes (88.055 MiB)
+RSS change             : +49.875 MiB
+Peak RSS               : 92418048 bytes (88.137 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 40777216 bytes (38.888 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:43
+Mode                   : data
+Scenario               : mixed
+Run                    : 4
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 524288
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 122.397 ms
+Throughput             : 8170130.216 updates/second
+Average time           : 122.397 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 40034304 bytes (38.180 MiB)
+RSS after              : 92332032 bytes (88.055 MiB)
+RSS change             : +49.875 MiB
+Peak RSS               : 92418048 bytes (88.137 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 40777216 bytes (38.888 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:43
+Mode                   : data
+Scenario               : mixed
+Run                    : 5
+Levels per side        : 250000
+Work units             : 1000000 updates
+Buffer size            : 524288
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 128.160 ms
+Throughput             : 7802721.727 updates/second
+Average time           : 128.160 ns/updates
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 40034304 bytes (38.180 MiB)
+RSS after              : 92332032 bytes (88.055 MiB)
+RSS change             : +49.875 MiB
+Peak RSS               : 92418048 bytes (88.137 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 40777216 bytes (38.888 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 591785
+Pending updates        : 0
+Checksum               : 1346438592156
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:43
+Mode                   : data
+Scenario               : snapshot
+Run                    : 1
+Levels per side        : 1000000
+Work units             : 2000000 levels
+Buffer size            : 262144
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 112.638 ms
+Throughput             : 17755996.300 levels/second
+Average time           : 56.319 ns/levels
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 35504128 bytes (33.859 MiB)
+RSS after              : 43499520 bytes (41.484 MiB)
+RSS change             : +7.625 MiB
+Peak RSS               : 43499520 bytes (41.484 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 32000000 bytes (30.518 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 2000000
+Pending updates        : 0
+Checksum               : 1346437624600
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:43
+Mode                   : data
+Scenario               : snapshot
+Run                    : 2
+Levels per side        : 1000000
+Work units             : 2000000 levels
+Buffer size            : 262144
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 115.802 ms
+Throughput             : 17270846.799 levels/second
+Average time           : 57.901 ns/levels
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 35848192 bytes (34.188 MiB)
+RSS after              : 43749376 bytes (41.723 MiB)
+RSS change             : +7.535 MiB
+Peak RSS               : 43843584 bytes (41.812 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 32000000 bytes (30.518 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 2000000
+Pending updates        : 0
+Checksum               : 1346437624600
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:43
+Mode                   : data
+Scenario               : snapshot
+Run                    : 3
+Levels per side        : 1000000
+Work units             : 2000000 levels
+Buffer size            : 262144
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 109.237 ms
+Throughput             : 18308780.755 levels/second
+Average time           : 54.619 ns/levels
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 35860480 bytes (34.199 MiB)
+RSS after              : 43749376 bytes (41.723 MiB)
+RSS change             : +7.523 MiB
+Peak RSS               : 43855872 bytes (41.824 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 32000000 bytes (30.518 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 2000000
+Pending updates        : 0
+Checksum               : 1346437624600
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:44
+Mode                   : data
+Scenario               : snapshot
+Run                    : 4
+Levels per side        : 1000000
+Work units             : 2000000 levels
+Buffer size            : 262144
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 109.593 ms
+Throughput             : 18249365.887 levels/second
+Average time           : 54.796 ns/levels
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 35860480 bytes (34.199 MiB)
+RSS after              : 43749376 bytes (41.723 MiB)
+RSS change             : +7.523 MiB
+Peak RSS               : 43855872 bytes (41.824 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 32000000 bytes (30.518 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 2000000
+Pending updates        : 0
+Checksum               : 1346437624600
+======================================================================
+
+BENCHMARK RESULT
+----------------------------------------------------------------------
+Timestamp              : 2026-09-13 12:05:44
+Mode                   : data
+Scenario               : snapshot
+Run                    : 5
+Levels per side        : 1000000
+Work units             : 2000000 levels
+Buffer size            : 262144
+
+PERFORMANCE
+----------------------------------------------------------------------
+Elapsed time           : 117.983 ms
+Throughput             : 16951607.796 levels/second
+Average time           : 58.991 ns/levels
+
+MEMORY USAGE
+----------------------------------------------------------------------
+RSS before             : 35860480 bytes (34.199 MiB)
+RSS after              : 43749376 bytes (41.723 MiB)
+RSS change             : +7.523 MiB
+Peak RSS               : 43855872 bytes (41.824 MiB)
+Private memory         : 0 bytes (0.000 MiB)
+Container allocation   : 32000000 bytes (30.518 MiB)
+
+FINAL STATE
+----------------------------------------------------------------------
+Active levels          : 2000000
+Pending updates        : 0
+Checksum               : 1346437624600
+======================================================================
+

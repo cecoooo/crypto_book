@@ -1,0 +1,72 @@
+@startuml
+
+class PriceLevel {
+    +price: uint64_t
+    +quantity: uint64_t
+}
+
+class PriceLevelContainer {
+    -data: vector<PriceLevel>
+    -overflow_buffer: vector<PriceLevel>
+    -orderBy: string_view
+    -bufferMaxSize: size_t
+    +addOrUpdateItem(item): void
+    +loadInitialLevels(levels): void
+    +getFirst(): PriceLevel*
+    +compact(): void
+}
+
+class Book {
+    -bids: PriceLevelContainer
+    -asks: PriceLevelContainer
+    +updateBid(price, quantity): void
+    +updateAsk(price, quantity): void
+    +bestBid(): PriceLevel*
+    +bestAsk(): PriceLevel*
+    +loadInitialBids(levels): void
+    +loadInitialAsks(levels): void
+}
+
+class BookContainer {
+    -symbolIds: unordered_map
+    -books: vector<Book>
+    +addBook(symbol): void
+    +getBook(symbol): Book
+    +removeBook(symbol): void
+}
+
+class SnapshotReader {
+    -buffer: vector<char>
+    +getSymbolForNewSnapshot(): string
+    +loadData(book): void
+}
+
+class UpdatesReader {
+    -buffer: vector<char>
+    +getLine(): void
+    +getSymbolFromLine(): string_view
+    +applyUpdates(book): void
+}
+
+class Engine {
+    -bookManager: BookContainer
+    -bookCache: unordered_map
+    +loadSnapshot(file): void
+    +loadUpdates(file): void
+    -compactData(): void
+}
+
+
+PriceLevelContainer *-- PriceLevel
+Book *-- PriceLevelContainer
+BookContainer *-- Book
+
+Engine --> BookContainer
+Engine --> SnapshotReader
+Engine --> UpdatesReader
+
+SnapshotReader --> Book
+UpdatesReader --> Book
+
+
+@enduml
