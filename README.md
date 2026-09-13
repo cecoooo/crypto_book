@@ -58,6 +58,7 @@ selects the snapshot and update paths in main.cpp, so these paths must point
 to the files on the machine where the program is executed.
 
 Architecture
+
 ![alt text](image.png)
 
 - The project is divided into the following modules:
