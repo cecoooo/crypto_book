@@ -1,24 +1,19 @@
 #!/usr/bin/env bash
 
-set -o pipefail
+set -e
 
 BUILD_DIR="build"
-BUILD_TYPE="Debug"
 
-mkdir -p "$BUILD_DIR"
-
-if ! cmake -S . -B "$BUILD_DIR" -DCMAKE_BUILD_TYPE="$BUILD_TYPE"; then
-    echo
-    echo "CMake configuration failed."
-    exit 1
+if [ ! -d "$BUILD_DIR" ]; then
+    mkdir "$BUILD_DIR"
 fi
 
-if ! cmake --build "$BUILD_DIR" --config "$BUILD_TYPE"; then
-    echo
-    echo "Build failed."
-    exit 1
-fi
+echo "cmake configuration..."
+cmake -S . -B "$BUILD_DIR" -DCMAKE_BUILD_TYPE=Release -DBUILD_BENCHMARKS=ON
 
-echo
-echo "Build completed successfully."
-echo "Executable: $BUILD_DIR/bin/order_book_app"
+echo "compile time..."
+cmake --build "$BUILD_DIR"
+
+echo -e "build successful"
+echo "Application: $BUILD_DIR/bin/order_book_app"
+echo "Benchmark:   $BUILD_DIR/bin/order_book_benchmark"

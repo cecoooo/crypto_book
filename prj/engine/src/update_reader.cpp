@@ -2,18 +2,18 @@
 #include <fstream>
 #include "pair_utils.hpp"
 
-UpdatesReader::UpdatesReader(const std::string& filePath)
+UpdatesReader::UpdatesReader(const std::filesystem::path& filePath)
 {
     std::ifstream file(filePath, std::ios::binary | std::ios::ate);
 
     if (!file) {
-        throw std::runtime_error("Could not open file: " + filePath);
+        throw std::runtime_error("Could not open file: " + filePath.string());
     }
 
     const std::streamsize fileSize = file.tellg();
 
     if (fileSize < 0) {
-        throw std::runtime_error("Could not determine file size: " + filePath);
+        throw std::runtime_error("Could not determine file size: " + filePath.string());
     }
 
     buffer.resize(static_cast<std::size_t>(fileSize));
@@ -25,7 +25,7 @@ UpdatesReader::UpdatesReader(const std::string& filePath)
 
         if (!file.read(buffer.data(), fileSize)) {
             throw std::runtime_error(
-                "Failed to read complete file: " + filePath);
+                "Failed to read complete file: " + filePath.string());
         }
 
         cursor = buffer.data();

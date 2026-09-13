@@ -4,45 +4,23 @@
 
 PriceLevelContainer::PriceLevelContainer(){}
 
-PriceLevelContainer::PriceLevelContainer(std::string_view orderWay, std::size_t capacity)
+PriceLevelContainer::PriceLevelContainer(std::string_view orderWay, std::size_t capacity, std::size_t maxBufferSize)
 {
-    if (orderWay != "DESC" && orderWay != "ASC")
+    if (orderWay != ORDER_DESC && orderWay != ORDER_ASC)
     {
         throw std::invalid_argument(
             "Invalid Order Way! Must be 'ASC' or 'DESC'.");
     }
 
     orderBy = orderWay;
+    bufferMaxSize = std::max<std::size_t>(1, maxBufferSize);
     data.reserve(capacity);
 }
 
 void PriceLevelContainer::addOrUpdateItem(const PriceLevel& item)
 {
-    if(orderBy == "ASC")
-    {
-        addOrUpdateAscending(item);
-    }
-    else
-    {
-        addOrUpdateDescending(item);
-    }
-}
-
-void PriceLevelContainer::addOrUpdateAscending(const PriceLevel& item)
-{
     overflow_buffer.emplace_back(item);
-
-    if (overflow_buffer.size() >= 131072)
-    {
-        compact();
-    }
-}
-
-void PriceLevelContainer::addOrUpdateDescending(const PriceLevel& item)
-{
-    overflow_buffer.emplace_back(item);
-
-    if (overflow_buffer.size() >= 131072)
+    if (overflow_buffer.size() >= bufferMaxSize)
     {
         compact();
     }
@@ -62,7 +40,7 @@ void PriceLevelContainer::loadInitialLevels(std::vector<PriceLevel>&& levels)
 {
     data = std::move(levels);
 
-    if (orderBy == "ASC")
+    if (orderBy == ORDER_ASC)
     {
         std::stable_sort(data.begin(), data.end(),
             [](const PriceLevel& a, const PriceLevel& b)
@@ -103,6 +81,21 @@ void PriceLevelContainer::loadInitialLevels(std::vector<PriceLevel>&& levels)
     data.resize(writeIndex);
 }
 
+std::size_t PriceLevelContainer::levelsCount() const noexcept
+{
+    return data.size();
+}
+
+std::size_t PriceLevelContainer::pendingUpdatesCount() const noexcept
+{
+    return overflow_buffer.size();
+}
+
+std::size_t PriceLevelContainer::allocatedBytes() const noexcept
+{
+    return (data.capacity() + overflow_buffer.capacity()) * sizeof(PriceLevel);
+}
+
 void PriceLevelContainer::compact()
 {
     if (overflow_buffer.empty())
@@ -110,7 +103,7 @@ void PriceLevelContainer::compact()
         return;
     }
 
-    if (orderBy == "ASC")
+    if (orderBy == ORDER_ASC)
     {
         std::stable_sort(overflow_buffer.begin(), overflow_buffer.end(),
             [](const PriceLevel& a, const PriceLevel& b)
@@ -133,7 +126,7 @@ void PriceLevelContainer::compact()
 
     overflow_buffer.clear();
 
-    if (orderBy == "ASC")
+    if (orderBy == ORDER_ASC)
     {
         std::inplace_merge(data.begin(), data.begin() + oldSize, data.end(),
             [](const PriceLevel& a, const PriceLevel& b)

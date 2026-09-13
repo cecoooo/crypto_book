@@ -4,6 +4,7 @@
 #include <string>
 #include <string_view>
 #include <utility>
+#include <filesystem>
 #include "book.hpp"
 
 class SnapshotReader
@@ -14,7 +15,7 @@ private:
     const char* fileEnd=nullptr;
     void loadBidOrAskFromSnapshot(Book& book, std::string_view bidsAsks);
 public:
-    SnapshotReader(const std::string& filePath);
+    SnapshotReader(const std::filesystem::path& filePath);
     std::string getSymbolForNewSnapshot();
     void loadData(Book& book);
 };

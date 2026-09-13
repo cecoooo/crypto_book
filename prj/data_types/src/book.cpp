@@ -1,8 +1,9 @@
 #include "book.hpp"
+#include "pair_utils.hpp"
 
-Book::Book(std::size_t expectedLevels): 
-    bids{PriceLevelContainer("DESC", expectedLevels)}, 
-    asks{PriceLevelContainer("ASC", expectedLevels)}
+Book::Book(std::size_t expectedLevels, std::size_t bufferMaxSize): 
+    bids{PriceLevelContainer(ORDER_DESC, expectedLevels, bufferMaxSize)}, 
+    asks{PriceLevelContainer(ORDER_ASC, expectedLevels, bufferMaxSize)}
 {}
 
 const PriceLevelContainer& Book::Bids() const noexcept

@@ -19,4 +19,8 @@ public:
     const Book* getBook(const std::string_view id) const noexcept;
     void removeBook(const std::string_view id);
     Book& addOrGetBook(const std::string_view id, std::size_t expectedLevels);
+    std::size_t booksCount() const noexcept;
+    std::size_t levelsCount() const noexcept;
+    std::size_t pendingUpdatesCount() const noexcept;
+    std::size_t allocatedBytes() const noexcept;
 };

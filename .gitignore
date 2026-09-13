@@ -1,2 +1,5 @@
 build/
 long_input/
+.vscode/
+build-benchmark/
+benchmark_logs/

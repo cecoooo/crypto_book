@@ -70,3 +70,41 @@ Book& BookContainer::addOrGetBook(const std::string_view id, std::size_t expecte
     }
     return books[it->second];
 }
+
+std::size_t BookContainer::booksCount() const noexcept
+{
+    return books.size();
+}
+
+std::size_t BookContainer::levelsCount() const noexcept
+{
+    std::size_t count = 0;
+    for (const auto& book : books)
+    {
+        count += book.Bids().levelsCount();
+        count += book.Asks().levelsCount();
+    }
+    return count;
+}
+
+std::size_t BookContainer::pendingUpdatesCount() const noexcept
+{
+    std::size_t count = 0;
+    for (const auto& book : books)
+    {
+        count += book.Bids().pendingUpdatesCount();
+        count += book.Asks().pendingUpdatesCount();
+    }
+    return count;
+}
+
+std::size_t BookContainer::allocatedBytes() const noexcept
+{
+    std::size_t bytes = books.capacity() * sizeof(Book);
+    for (const auto& book : books)
+    {
+        bytes += book.Bids().allocatedBytes();
+        bytes += book.Asks().allocatedBytes();
+    }
+    return bytes;
+}

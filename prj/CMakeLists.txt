@@ -5,12 +5,24 @@ project(OrderBookProject
     LANGUAGES CXX
 )
 
+include(CTest)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+add_subdirectory(utils)
 add_subdirectory(data_types)
 add_subdirectory(engine)
+
+option(BUILD_BENCHMARKS "Build the benchmark suite" ON)
+if(BUILD_BENCHMARKS)
+    add_subdirectory(benchmarks)
+endif()
+
+if(BUILD_TESTING)
+    add_subdirectory(test)
+endif()
 
 add_executable(order_book_app
     main.cpp
@@ -18,6 +30,7 @@ add_executable(order_book_app
 
 target_link_libraries(order_book_app
     PRIVATE
+        utils
         data_types
         engine
 )

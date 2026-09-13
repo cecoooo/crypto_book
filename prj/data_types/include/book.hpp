@@ -10,7 +10,7 @@ private:
     PriceLevelContainer asks;
 
 public:
-    explicit Book(std::size_t expectedLevels = 0);
+    explicit Book(std::size_t expectedLevels = 0, std::size_t bufferMaxSize = BUFFER_MAX_SIZE);
 
     void updateBid(uint64_t price, uint64_t quantity);
     void updateAsk(uint64_t price, uint64_t quantity);

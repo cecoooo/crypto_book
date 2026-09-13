@@ -2,18 +2,18 @@
 #include <fstream>
 #include "pair_utils.hpp"
 
-SnapshotReader::SnapshotReader(const std::string& filePath)
+SnapshotReader::SnapshotReader(const std::filesystem::path& filePath)
 {
     std::ifstream file(filePath, std::ios::binary | std::ios::ate);
 
     if (!file) {
-        throw std::runtime_error("Could not open file: " + filePath);
+        throw std::runtime_error("Could not open file: " + filePath.string());
     }
 
     const std::streamsize fileSize = file.tellg();
 
     if (fileSize < 0) {
-        throw std::runtime_error("Could not determine file size: " + filePath);
+        throw std::runtime_error("Could not determine file size: " + filePath.string());
     }
 
     buffer.resize(static_cast<std::size_t>(fileSize));
@@ -25,7 +25,7 @@ SnapshotReader::SnapshotReader(const std::string& filePath)
 
         if (!file.read(buffer.data(), fileSize)) {
             throw std::runtime_error(
-                "Failed to read complete file: " + filePath);
+                "Failed to read complete file: " + filePath.string());
         }
 
         cursor = buffer.data();
@@ -63,8 +63,6 @@ void SnapshotReader::loadBidOrAskFromSnapshot(Book& book, std::string_view bidsA
 {
     std::vector<PriceLevel> initialLevels;
     initialLevels.reserve(buffer.size()/60);
-    int c=0;
-    std::cout << "Buffer size: " << std::to_string(buffer.size()) << std::endl;
 
     const char* scan = cursor;
     while (scan < fileEnd && !(*scan == bidsAsks[0] && *(scan+1) == bidsAsks[1] && *(scan+2) == bidsAsks[2])) scan++;
@@ -81,7 +79,6 @@ void SnapshotReader::loadBidOrAskFromSnapshot(Book& book, std::string_view bidsA
                 std::uint64_t price = parseFixedPoint(pStr);
                 std::uint64_t quantity = parseFixedPoint(qStr);
                 initialLevels.emplace_back(price, quantity);
-                c++;
             }
         } else if (*scan == ']') {
             openBrackets--;
@@ -96,7 +93,6 @@ void SnapshotReader::loadBidOrAskFromSnapshot(Book& book, std::string_view bidsA
     {
         book.loadInitialBids(std::move(initialLevels));
     }
-    std::cout << "Valuye of c: " << std::to_string(c) << std::endl;
 }
 
 void SnapshotReader::loadData(Book& book)
