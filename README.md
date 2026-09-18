@@ -78,22 +78,7 @@ to the files on the machine where the program is executed.
 
 ## Architecture
 
-```text
-main.cpp
-    |
-    v
-Engine
-    |-- SnapshotReader
-    |-- UpdatesReader
-    |
-    v
-BookContainer
-    |
-    v
-Book
-    |-- Bid PriceLevelContainer
-    |-- Ask PriceLevelContainer
-```
+image.png
 
 The project is divided into the following modules:
 
