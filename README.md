@@ -78,7 +78,7 @@ to the files on the machine where the program is executed.
 
 ## Architecture
 
-image.png
+![alt text](image.png)
 
 The project is divided into the following modules:
 
